@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+	<frame title="俄罗斯方块" windowUp="16" width="1200" height="700" 
+			padding="16" border="7" sizeRol="5" loseIdx="8">
+		<button w="150" h="52">
+			<start x="799" y="68"/>
+			<userConfig x="960" y="68"/>
+		</button>	
+		<layer className="ui.LayerBackground" x="0" y="0" w="0" h="0"/>
+		<layer className="ui.LayerDataBase" x="40" y="32" w="334" h="279"/>
+		<layer className="ui.LayerDisk" x="40" y="343" w="334" h="279"/>
+		<layer className="ui.LayerGame" x="414" y="32" w="334" h="590"/>
+		<layer className="ui.LayerButton" x="788" y="32" w="334" h="124"/>
+		<layer className="ui.LayerNext" x="788" y="188" w="176" h="116"/>
+		<layer className="ui.LayerLevel" x="964" y="188" w="158" h="116"/>
+		<layer className="ui.LayerPoint" x="788" y="336" w="334" h="160"/>
+		<layer className="ui.LayerAbout" x="788" y="528" w="334" h="94"/>
+	</frame>
+	<system minX="0" maxX="9" minY="0" maxY="17" levelUp="20">
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="0"/><point x="5" y="0"/><point x="6" y="0"/>
+		</rect>
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="0"/><point x="5" y="0"/><point x="4" y="1"/>
+		</rect>
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="0"/><point x="5" y="0"/><point x="3" y="1"/>
+		</rect>
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="1"/><point x="5" y="0"/><point x="4" y="1"/>
+		</rect>
+		<rect round="false">
+			<point x="4" y="0"/><point x="5" y="0"/><point x="4" y="1"/><point x="5" y="1"/>
+		</rect>
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="0"/><point x="5" y="0"/><point x="5" y="1"/>
+		</rect>
+		<rect round="true">
+			<point x="4" y="0"/><point x="3" y="0"/><point x="5" y="1"/><point x="4" y="1"/>
+		</rect>
+		<plusScore rm="1" score="10"/>
+		<plusScore rm="2" score="30"/>
+		<plusScore rm="3" score="50"/>
+		<plusScore rm="4" score="80"/>
+	</system>
+	<data maxRow="5">
+		<dataA className="dao.DataBase">
+			<param key="driver" value="com.mysql.jdbc.Driver"/>
+			<param key="dbUrl" value="jdbc:mysql://localhost:3306/mygame"/>
+			<param key="dbUser" value="gm"/>
+			<param key="dbPwd" value="gm123"/>
+		</dataA>
+		<dataB className="dao.DataDisk">
+			<param key="path" value="data/recode.dat"/>
+		</dataB>
+	</data>
+</game>
